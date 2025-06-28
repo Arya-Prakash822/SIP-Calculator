@@ -10,17 +10,28 @@
 <body>
   <div class="container">
     <h1>SIP Interest Calculator</h1>
+    
+    <section class="description">
+      <p><strong>What is SIP?</strong></p>
+      <p>
+        A Systematic Investment Plan (SIP) allows you to invest a fixed amount regularly in mutual funds. 
+        It harnesses the power of compounding and rupee cost averaging to grow your wealth over time, 
+        making it a smart and disciplined investment approach.
+      </p>
+    </section>
+
     <form id="sipForm">
-      <label>Monthly Investment (₹): <input type="number" id="monthlyInvestment" required /></label>
-      <label>Annual Return Rate (%): <input type="number" id="annualRate" required /></label>
-      <label>Duration (Years): <input type="number" id="years" required /></label>
+      <label>Monthly Investment (₹): <input type="number" id="monthlyInvestment" required min="1" /></label>
+      <label>Annual Return Rate (%): <input type="number" id="annualRate" required min="1" step="0.01" /></label>
+      <label>Duration (Years): <input type="number" id="years" required min="1" /></label>
       <button type="submit">Calculate</button>
     </form>
 
-    <div id="results">
+    <div id="results" style="display:none;">
+      <h2>Results Summary</h2>
       <p><strong>Total Invested:</strong> ₹<span id="invested"></span></p>
       <p><strong>Maturity Amount:</strong> ₹<span id="maturity"></span></p>
-      <p><strong>Total Interest:</strong> ₹<span id="interest"></span></p>
+      <p><strong>Total Interest Earned:</strong> ₹<span id="interest"></span></p>
     </div>
 
     <canvas id="sipChart" height="100"></canvas>
