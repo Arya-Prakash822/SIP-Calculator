@@ -3,20 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Options Insight – SIP Calculator</title>
+  <title>SIP Calculator – Options Insight</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+  <header>
+    <h1>📊 SIP Calculator</h1>
+    <p>Estimate your mutual fund returns with monthly investments</p>
+  </header>
+
   <div class="container">
-    <h1>SIP Interest Calculator</h1>
-    
     <section class="description">
-      <p><strong>What is SIP?</strong></p>
+      <h2>📘 What is a SIP Calculator?</h2>
       <p>
-        A Systematic Investment Plan (SIP) allows you to invest a fixed amount regularly in mutual funds. 
-        It harnesses the power of compounding and rupee cost averaging to grow your wealth over time, 
-        making it a smart and disciplined investment approach.
+        A SIP (Systematic Investment Plan) calculator is a simple online tool that estimates returns from mutual fund investments made regularly.
+        It's especially popular among millennials for building long-term wealth through small, disciplined investments.
+      </p>
+
+      <h3>💡 How can it help?</h3>
+      <ul>
+        <li>Helps you determine how much to invest to meet goals</li>
+        <li>Shows total invested amount and expected maturity</li>
+        <li>Encourages financial discipline and habit of saving</li>
+      </ul>
+
+      <h3>🧠 How does it work?</h3>
+      <p>
+        The calculator uses the compound interest formula:
+        <br /><br />
+        <code>M = P × ((1 + i)<sup>n</sup> – 1) / i × (1 + i)</code><br /><br />
+        Where:
+        <ul>
+          <li><strong>M</strong> = Maturity amount</li>
+          <li><strong>P</strong> = Monthly investment</li>
+          <li><strong>n</strong> = Number of payments</li>
+          <li><strong>i</strong> = Monthly interest rate (annual rate ÷ 12 ÷ 100)</li>
+        </ul>
+      </p>
+
+      <h4>📈 Example:</h4>
+      <p>
+        Invest ₹1,000/month for 12 months at 12% annual rate:<br />
+        Monthly rate = 12% / 12 = 1% = 0.01<br />
+        Maturity ≈ ₹12,809
+      </p>
+
+      <p>
+        ⚠️ *Note: Actual returns vary with market conditions, exit loads, and expense ratios.*
       </p>
     </section>
 
@@ -28,14 +61,60 @@
     </form>
 
     <div id="results" style="display:none;">
-      <h2>Results Summary</h2>
+      <h2>📄 Results Summary</h2>
       <p><strong>Total Invested:</strong> ₹<span id="invested"></span></p>
       <p><strong>Maturity Amount:</strong> ₹<span id="maturity"></span></p>
       <p><strong>Total Interest Earned:</strong> ₹<span id="interest"></span></p>
     </div>
 
+    <button id="downloadPDF" style="display:none;">📥 Download PDF Report</button>
     <canvas id="sipChart" height="100"></canvas>
   </div>
+  <section class="schemes">
+  <h2>📈 Schemes for You</h2>
+
+  <div class="scheme-list">
+    <div class="scheme-card">
+      <h3>HDFC Small Cap Fund</h3>
+      <p><strong>NAV:</strong> ₹133.57 (as on 27 Jun 2025)</p>
+      <p><strong>Annualised Return (5Y):</strong> <span class="green">26.92%</span></p>
+      <p><strong>Benchmark Return:</strong> 35.38%</p>
+      <p>₹10,000 invested → ₹93,309</p>
+      <button class="invest-btn"><a href="https://www.moneycontrol.com/mutual-funds/nav/hdfc-small-cap-fund/MMS002">Invest</a></button>
+    </div>
+
+    <div class="scheme-card">
+      <h3>TATA Infrastructure Fund</h3>
+      <p><strong>NAV:</strong> ₹124.62 (as on 27 Jun 2025)</p>
+      <p><strong>Annualised Return (5Y):</strong> <span class="green">33.69%</span></p>
+      <p><strong>Benchmark Return:</strong> 31.60%</p>
+      <p>₹10,000 invested → ₹1,20,020</p>
+      <button class="invest-btn"><a href="https://www.moneycontrol.com/mutual-funds/nav/tata-infrastructure-fund-regular-plan/MTA131">Invest </a></button>
+    </div>
+
+    <div class="scheme-card">
+      <h3>Axis NIFTY 100 Index Fund</h3>
+      <p><strong>NAV:</strong> ₹23.27 (as on 27 Jun 2025)</p>
+      <p><strong>Annualised Return (5Y):</strong> <span class="green">21.92%</span></p>
+      <p><strong>Benchmark Return:</strong> 22.33%</p>
+      <p>₹10,000 invested → ₹22,441</p>
+      <button class="invest-btn"> <a href="https://www.moneycontrol.com/mutual-funds/nav/axis-nifty-100-index-fund-direct-plan/MAA873">Invest</a>
+      </button>
+    </div>
+  </div>
+
+  <div id="referralNote">
+  <strong>📢 Open your Trading & Investment account with Angel One for FREE</strong><br><br>
+  You will get:<br>
+  ✅ All trades in Rs.20 💹<br>
+  ✅ Quick SIP in Direct MF ⚡<br>
+  ✅ 1Lac MTF @ 0% interest 💰<br><br>
+  <strong>Download only using my referral link:</strong><br>
+  <a href="https://angel-one.onelink.me/Wjgr/pcyxg594" target="_blank">https://angel-one.onelink.me/Wjgr/pcyxg594</a>
+</div>
+
+</section>
+
 
   <script src="script.js"></script>
 </body>
