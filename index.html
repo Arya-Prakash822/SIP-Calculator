@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Options Insight – SIP Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>SIP Interest Calculator</h1>
+    <form id="sipForm">
+      <label>Monthly Investment (₹): <input type="number" id="monthlyInvestment" required /></label>
+      <label>Annual Return Rate (%): <input type="number" id="annualRate" required /></label>
+      <label>Duration (Years): <input type="number" id="years" required /></label>
+      <button type="submit">Calculate</button>
+    </form>
+
+    <div id="results">
+      <p><strong>Total Invested:</strong> ₹<span id="invested"></span></p>
+      <p><strong>Maturity Amount:</strong> ₹<span id="maturity"></span></p>
+      <p><strong>Total Interest:</strong> ₹<span id="interest"></span></p>
+    </div>
+
+    <canvas id="sipChart" height="100"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
