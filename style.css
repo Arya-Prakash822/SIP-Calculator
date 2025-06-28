@@ -2,24 +2,67 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #e3f2fd, #ffffff);
   margin: 0;
-  padding: 2rem;
+  padding: 0;
   color: #333;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background: #007bff;
+  color: white;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+header p {
+  margin: 0.3rem 0 0;
+  font-size: 1rem;
 }
 
 .container {
   background: #ffffff;
   padding: 2.5rem;
   border-radius: 10px;
-  max-width: 600px;
-  margin: auto;
+  max-width: 700px;
+   margin: 7rem auto 2rem;
   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
   border-top: 5px solid #007bff;
 }
 
-h1 {
-  text-align: center;
+.description {
+  margin-bottom: 2rem;
+  background: #fefefe;
+  padding: 1.5rem;
+  border-left: 5px solid #007bff;
+  border-radius: 5px;
+  line-height: 1.6;
+}
+
+.description h2, .description h3, .description h4 {
   color: #007bff;
-  margin-bottom: 1.5rem;
+}
+
+.description ul {
+  margin-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.description code {
+  background: #eef;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  display: inline-block;
 }
 
 form label {
@@ -74,4 +117,83 @@ button:hover {
 
 canvas {
   margin-top: 2rem;
+}
+.schemes {
+  margin-top: 3rem;
+}
+
+.schemes h2 {
+  font-size: 1.6rem;
+  color: #007bff;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.scheme-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.scheme-card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  max-width: 300px;
+  width: 100%;
+  text-align: left;
+  border-top: 4px solid #dc3545;
+}
+
+.scheme-card h3 {
+  margin-top: 0;
+  color: #dc3545;
+}
+
+.scheme-card p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.green {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.invest-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+.invest-btn a{
+  color: white;
+  text-decoration: none;
+}
+
+.invest-btn:hover {
+  background-color: #23a873;
+}
+#referralNote {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  width: 260px;
+  background: #9ebfe4;
+  border: 5px solid #97bdea;
+  padding: 15px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  cursor: move;
 }
